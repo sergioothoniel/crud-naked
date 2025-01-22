@@ -1,0 +1,26 @@
+service: crud-naked
+
+provider:
+  stage: prod
+  name: aws
+  runtime: nodejs20.x
+  region: sa-east-1
+  profile: personal
+
+functions:
+  crudNaked:
+    name: crudNaked
+    handler: dist/app.init
+    events:
+      - http:
+          path: /{proxy+}
+          method: get
+      - http:
+          path: /{proxy+}
+          method: post
+      - http:
+          path: /{proxy+}
+          method: patch
+      - http:
+          path: /{proxy+}
+          method: delete

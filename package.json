@@ -1,0 +1,35 @@
+{
+  "name": "crud-naked",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.ts",
+  "scripts": {
+    "dev": "npx nodemon --watch src --ext ts --exec \"ts-node src/server.ts\"",
+    "build": "npx tsc",
+    "start": "node dist/server.js",
+    "deploy": "npx serverless deploy",
+    "test": "npx ts-node src/__tests__/index.spec.ts"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sergioothoniel/crud-naked.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sergioothoniel/crud-naked/issues"
+  },
+  "homepage": "https://github.com/sergioothoniel/crud-naked#readme",
+  "devDependencies": {
+    "@types/aws-sdk": "^0.0.42",
+    "@types/node": "^22.10.7",
+    "nodemon": "^3.1.9",
+    "serverless": "^4.4.19",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.7.3"
+  },
+  "dependencies": {
+    "@aws-sdk/client-dynamodb": "^3.731.1"
+  }
+}
